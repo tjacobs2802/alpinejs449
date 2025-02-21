@@ -3,5 +3,8 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+
+<div x-data="{names: ['Trevor', 'Delaney', 'Dave', 'Carolyn', 'Justin', 'Kyle', 'Jason', 'Brandon', 'Andrew', 'Natalie'], selectedName: ''}">
+    <button @click="selectedName = names[Math.floor(Math.random() * names.length)]">Get Random Name</button>
+    <h1 x-text="selectedName"></h1>
+</div>
